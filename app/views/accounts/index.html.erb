@@ -1,3 +1,14 @@
 <h1>Accounts#index</h1>
 Name: <%= current_user.first_name%> <%= current_user.last_name %>
+<hr />
+
+<h1> Accounts:</h1>
+<%= link_to 'New Account', new_account_path %>
+
+<ul>
+<% @accounts.each do |account| %>
+  <%= "#{account.name} balance #{account.balance}" %>
+<% end %>
+</ul>
+
 <%= button_to "Log Out", destroy_user_session_path, method: :delete %>
