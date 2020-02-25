@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'static_pages/index'
+  get 'static_pages/new'
   root to: "accounts#index"
   resources :accounts
   devise_for :users

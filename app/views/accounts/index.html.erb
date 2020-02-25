@@ -7,7 +7,7 @@ Name: <%= current_user.first_name%> <%= current_user.last_name %>
 
 <ul>
 <% @accounts.each do |account| %>
-  <%= "#{account.name} balance #{account.balance}" %>
+  <%= "Account: #{account.name} Balance: #{account.balance}" %><br />
 <% end %>
 </ul>
 
